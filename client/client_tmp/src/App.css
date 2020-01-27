@@ -1,0 +1,253 @@
+.m-size-btn{
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.signupBtn {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.loginBtn {
+  color: black;
+  position: relative;
+  left: 10px;
+}
+
+.play-container{
+  width: 75%;
+  height: 550px;
+  float:left;
+}
+
+.player-area{
+  width: 33.33%;
+  border: 1px solid black;
+  height: 45%;
+  float:left;
+}
+
+.center-area{
+  width: 100%;
+  height: 10%;
+  border: 1px solid black;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dealer-area{
+  width: 100%;
+  height: 45%;
+  border: 1px solid black;
+  float:left;
+}
+
+.calculation-display-container{
+  width: 25%;
+  height: 550px;
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+}
+
+.center-btn{
+  height: 100%;
+  width: 30%;
+  border-radius: 10px;
+  font-size: 180%;
+  font-weight: bold;
+}
+.hit-btn{
+  background-color: #00b56b;
+}
+
+.stand-btn{
+  background-color: rgb(222, 58, 57);
+}
+.start-btn{
+  background-color: black;
+  color:white;
+}
+
+.card{
+  height: 150px;
+  width: 110px;
+  position: relative;
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.card-top-left{
+  position: absolute;
+  left: 2%;
+  top: 2%;
+}
+.card-center{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-bot-right{
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  transform: rotate(180deg);
+}
+
+.player-c0{
+  position: absolute;
+  right: 5%;
+}
+
+.player-c1{
+  position: absolute;
+  right: 17.5%;
+}
+
+.player-c2{
+  position: absolute;
+  right: 30%;
+}
+
+.player-c3{
+  position: absolute;
+  right: 42.5%;
+}
+
+.player-c4{
+  position: absolute;
+  right: 55%;
+}
+
+.player-area-cards{
+  height: 85%;
+  width: 100%;
+  border: 1px solid black;
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./srcImages/cardTable.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.player-area-info{
+  height: 15%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.player-value{
+  width:50%;
+  height:100%;
+  border: 1px solid black;
+  float:left;
+  text-align: center;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.player-value{
+  width:50%;
+  height:100%;
+  border: 1px solid black;
+  float:left;
+  text-align: center;
+}
+
+.dealer-area-info{
+  height: 22%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.dealer-area-cards{
+  height: 78%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./srcImages/cardTable.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dealer-card{
+  margin:1%;
+}
+
+.dealer-value{
+  height: 100%;
+  width: 50%;
+  float:left;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+}
+.dealer-earnings{
+  height: 100%;
+  width: 50%;
+  float:left;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.card-suit{
+  height: 50%;
+  width: 70%;
+}
+
+.top-probability-bar{
+  width: 100%;
+}
+
+.probability-summary{
+  border: 1px solid black;
+}
+
+.how-probability{
+  border: 1px solid black;
+  font-size: 75%;
+}
+
+.probability-section{
+  font-size: 75%;
+}
+
+.opponent-analysis{
+  margin: 10px;
+}
+
+.opponent-analysis-title{
+  font-weight: bold;
+}
+
+.suggestion{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.icons{
+  width: 40px;
+  margin-bottom: 5px;
+}
+
+.navbar-items{
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.mainIcon{
+  width: 40px;
+}
+
+.final-analysis{
+  font-weight: bold;
+}
