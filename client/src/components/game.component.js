@@ -88,7 +88,8 @@ export default class gamePage extends Component{
         }
 
         // retrieve dealer's money from db
-        axios.get('http://localhost:3000/users/')
+        // axios.get('http://localhost:3000/users/')
+        axios.get('https://probblackjack.herokuapp.com/users/')
         .then(response => {
             for (let i=0; i < response.data.length; i++){
                 if (response.data[i].username === this.props.location.state.loggedInUser){
@@ -227,7 +228,7 @@ export default class gamePage extends Component{
         }
         let currentRoundEarnings = this.state.dealer.money - tempDealerMoney;
 
-        axios.post('http://localhost:3000/users/update/' + this.state.loggedInUserId, {
+        axios.post('https://probblackjack.herokuapp.com/users/update/' + this.state.loggedInUserId, {
             money: this.state.dealer.money
         })
         .then(res => console.log(res.data))
@@ -284,7 +285,7 @@ export default class gamePage extends Component{
 
     componentDidMount(){
         // Get user id
-        axios.get('http://localhost:3000/users/')
+        axios.get('https://probblackjack.herokuapp.com/users/')
         .then(response => {
             for (let i=0; i < response.data.length; i++){
                 if (response.data[i].username === this.props.location.state.loggedInUser){
