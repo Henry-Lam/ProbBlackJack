@@ -25,7 +25,7 @@ export default class rootPage extends Component{
 
     componentDidMount(){
         // axios.get('http://localhost:3000/users/')
-        axios.get('https://probblackjack.herokuapp.com/users/')
+        axios.get('/users/')
         .then(response => {
             this.setState({ allUsers: response.data })
         })
@@ -50,8 +50,11 @@ export default class rootPage extends Component{
             username: this.state.username,
             password: this.state.password,
         }
-        axios.post('https://probblackjack.herokuapp.com/users/add', user)
-        .then(() => this.setState({ loginSuccess: true}));
+        axios.post('/users/add', user)
+        .then(() => this.setState({ loginSuccess: true}))
+        .catch((error) => {
+            console.log(error)
+        })
     }
 
     login(){
