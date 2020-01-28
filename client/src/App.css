@@ -251,3 +251,7 @@
 .final-analysis{
   font-weight: bold;
 }
+
+.error-text{
+  color:red;
+}

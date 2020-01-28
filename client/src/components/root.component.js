@@ -21,6 +21,7 @@ export default class rootPage extends Component{
             password: '',
             allUsers: [],
             loginSuccess: false,
+            signupError: false,
         }
     }
 
@@ -63,6 +64,9 @@ export default class rootPage extends Component{
         .then(() => this.setState({ loginSuccess: true}))
         .catch((error) => {
             console.log(error)
+            this.setState({
+                signupError: true,
+            })
         })
     }
 
@@ -99,6 +103,7 @@ export default class rootPage extends Component{
                         value={this.state.username}
                         onChange={this.onChangeUsername}
                         />
+                        <span className = "error-text">{this.state.signupError ? "username already in use" : ""}</span>
                 </div>
                 <div className="form-group"> 
                     <label>Password: </label>
