@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import bcryptjs from 'bcryptjs';
 
 export default class rootPage extends Component{
     
@@ -46,10 +47,18 @@ export default class rootPage extends Component{
     }
 
     signup(){
+
+        var salt = bcryptjs.genSaltSync(10);
+        var hash = bcryptjs.hashSync(this.state.password, salt)
+
         const user = {
             username: this.state.username,
-            password: this.state.password,
+            password: hash,
         }
+        // const user = {
+        //     username: this.state.username,
+        //     password: this.state.password,
+        // }
         axios.post('/users/add', user)
         .then(() => this.setState({ loginSuccess: true}))
         .catch((error) => {
@@ -60,11 +69,18 @@ export default class rootPage extends Component{
     login(){
         for(let i =0; i < this.state.allUsers.length; i++){
             if (this.state.allUsers[i].username === this.state.username){
-                if (this.state.allUsers[i].password === this.state.password){
+                if (bcryptjs.compareSync(this.state.password, this.state.allUsers[i].password)){
                     this.setState({loginSuccess: true})
                 }
             }
         }
+        // for(let i =0; i < this.state.allUsers.length; i++){
+        //     if (this.state.allUsers[i].username === this.state.username){
+        //         if (this.state.allUsers[i].password === this.state.password){
+        //             this.setState({loginSuccess: true})
+        //         }
+        //     }
+        // }
     }
 
     render(){
