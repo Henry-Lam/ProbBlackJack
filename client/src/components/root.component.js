@@ -25,7 +25,7 @@ export default class rootPage extends Component{
 
     componentDidMount(){
         // axios.get('http://localhost:3000/users/')
-        axios.get('http://probblackjack.herokuapp.com/users/')
+        axios.get('https://probblackjack.herokuapp.com/users/')
         .then(response => {
             this.setState({ allUsers: response.data })
         })
