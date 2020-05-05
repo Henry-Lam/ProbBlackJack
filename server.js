@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 
-//test
+//test 2
 
 app.use(cors());
 app.use(express.json());
