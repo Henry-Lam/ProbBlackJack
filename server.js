@@ -6,7 +6,8 @@ require('dotenv').config();
 
 const app = express();
 
-//merge 1
+// merge 1
+// Test merge 2
 
 app.use(cors());
 app.use(express.json());
